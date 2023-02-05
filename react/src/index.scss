@@ -1,0 +1,1683 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100&display=swap');
+
+@mixin block-setting($m, $p, $h, $w) {
+    //no-margin-padding
+    //text-align-center line-height
+    //height width
+    margin: $m auto;
+    padding: $p;
+    text-align: center;
+    height: $h;
+    width: $w;
+}
+
+@mixin font-setting($size) {
+    //font
+    font-size: $size;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-style: normal;
+    font-weight: bolder;
+    font-display: initial;
+}
+
+@mixin border($width, $radius, $color) {
+    border-width: $width;
+    border-color: $color;
+    border-radius: $radius;
+    border-style: solid;
+}
+
+@mixin body() {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+@mixin backgroud-color($color) {
+    background-color: $color;
+}
+
+
+@keyframes allpage {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 0.98;
+    }
+}
+
+
+.new-add {
+    box-shadow: black 5px 5px 20px;
+    @include border(2px, 20px, rgb(109, 107, 107));
+    @include font-setting(20px);
+    @include block-setting(0, 0, 50px, 100px);
+}
+
+.new-add:hover {
+    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+}
+
+.new-add:active {
+    transform: translate(3px, 5px);
+}
+
+* {
+    animation-name: allpage;
+    animation-iteration-count: 1;
+    animation-timing-function: linear;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+    animation-direction: normal;
+    max-width: 100%;
+
+}
+
+body {
+    @include block-setting(0, 0, fit-content, 1300px);
+    min-width: 400px;
+    @include font-setting(18px);
+    background-image: url('tool3.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-x: auto;
+
+    #root {
+        @include block-setting(0, 0, fit-content, 1300px);
+        @include body();
+
+        #sel {
+            box-shadow: black 5px 5px 20px;
+            @include block-setting(0, 0px, 100px, 1300px);
+            margin-top: 20px;
+            background-image: url('tool.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            @include border(2px, 20px, rgb(109, 107, 107));
+
+            tbody {
+                @include block-setting(0, 0px, 100px, 1300px);
+
+                tr {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    flex-direction: row;
+                    flex-wrap: nowrap;
+                    height: 100px;
+                    margin-left: 15px;
+                    margin-right: 15px;
+                }
+
+                #sel-year {
+                    width: 100px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-career {
+                    width: 100px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-dept {
+                    width: 200px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-level {
+                    width: 100px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-lang {
+                    width: 100px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-text {
+                    width: 100px;
+                    border-radius: 5px;
+                    @include font-setting(14px);
+                }
+
+                #sel-teach {
+                    width: 100px;
+                    border-radius: 5px;
+                    @include font-setting(14px);
+                }
+
+                #sel-crsName {
+                    width: 100px;
+                    border-radius: 5px;
+                    @include font-setting(14px);
+                }
+
+                #sel-teacher {
+                    width: 100px;
+                    border-radius: 5px;
+                    @include font-setting(14px);
+                }
+
+                #sel-week {
+                    width: 40px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-mtg {
+                    width: 40px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-emi {
+                    width: 40px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-subject {
+                    width: 100px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-group {
+                    width: 100px;
+                    border-radius: 10px;
+                    @include font-setting(14px);
+                }
+
+                #sel-crseno {
+                    width: 100px;
+                    border-radius: 5px;
+                    @include font-setting(14px);
+                }
+            }
+        }
+
+        div {
+            margin-top: 25px;
+            margin-bottom: 25px;
+
+            .submit {
+                box-shadow: black 5px 5px 20px;
+                @include block-setting(0, 0px, 80px, 100px);
+                @include border(2px, 20px, rgb(109, 107, 107));
+                @include font-setting(14px);
+            }
+
+            .submit:hover {
+                box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+            }
+
+            .submit:active {
+                transform: translate(3px, 5px);
+            }
+        }
+
+        #content {
+            @include block-setting(0, 0, 600px, 1300px);
+            background-image: url('tool6.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            @include font-setting(14px);
+            opacity: 0.95;
+            overflow: auto;
+            box-shadow: black 5px 5px 20px;
+            .word_13 {
+                @include block-setting(0, 0, fit-content, 1300px);
+                background-image: url('tool6.jpg');
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                background-attachment: fixed;
+                @include border(2px, 0px, rgb(185, 181, 181));
+                box-shadow: black 5px 5px 20px;
+                table-layout: auto;
+                word-break: break-all;
+
+                thead {
+                    tr {
+                        td {
+                            background-image: url('tool6.jpg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-attachment: fixed;
+                            @include border(1px, 0px, rgb(185, 181, 181));
+                            @include block-setting(0, 0, 100px, 80px);
+                        }
+
+                        th {
+                            background-image: url('tool6.jpg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-attachment: fixed;
+                            @include border(1px, 0px, rgb(185, 181, 181));
+                            @include block-setting(0, 0, 100px, 80px);
+                        }
+                    }
+                }
+
+                tbody {
+                    tr {
+                        &:nth-child(even) td {
+                            background-image: url('tool4.jpg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-attachment: fixed;
+                            @include border(1px, 0px, rgb(185, 181, 181));
+                            @include block-setting(0, 0, 100px, 80px);
+                            color: black !important;
+                            white-space: pre-wrap;
+                        }
+
+                        &:nth-child(odd) td {
+                            background-image: url('tool5.jpg');
+                            background-position: center;
+                            background-repeat: no-repeat;
+                            background-size: cover;
+                            background-attachment: fixed;
+                            @include border(1px, 0px, rgb(185, 181, 181));
+                            @include block-setting(0, 0, 100px, 80px);
+                            color: black !important;
+                            white-space: pre-wrap;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        #curriculum {
+            @include block-setting(0, 0, 120px, 1300px);
+            background-image: url('tool8.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            @include font-setting(14px);
+            box-shadow: black 5px 5px 20px;
+            opacity: 0.95;
+
+            #curriculum-thead {
+                background-color: antiquewhite;
+            }
+
+            #curriculum-tbody {
+                background-color: bisque;
+                table-layout: fixed;
+                word-break: break-all;
+
+                #tbody-tr {
+                    td {
+                        background-image: url('tool7.jpg');
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        background-size: cover;
+                        background-attachment: fixed;
+                    }
+
+                    &:nth-child(even) td {
+                        @include backgroud-color(rgb(144, 148, 130));
+                        @include border(2px, 0px, rgb(185, 181, 181));
+                        @include block-setting(0, 0, 120px, 80px);
+                        color: black !important;
+                    }
+
+                    &:nth-child(odd) td {
+                        @include backgroud-color(rgb(132, 138, 109));
+                        @include border(2px, 0px, rgb(185, 181, 181));
+                        @include block-setting(0, 0, 120px, 80px);
+                        color: black !important;
+                    }
+                }
+            }
+        }
+
+        #header {
+            @include block-setting(0, 0, 120px, 1300px);
+            background-image: url('tool2.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            @include border(2px, 20px, rgb(17, 14, 14));
+            box-shadow: black 5px 5px 20px;
+            padding-top: 40px;
+
+            ul {
+                @include block-setting(0, 0, 120px, 1300px);
+
+                .navbar-List {
+                    @include block-setting(0, 10px, 80px, 150px);
+                    display: inline-block;
+
+                    .navbar-Link {
+                        text-decoration: none;
+                        color: black;
+
+                        &:hover {
+                            color: rgb(44, 145, 83);
+                        }
+
+                        &:active {
+                            color: rgb(39, 71, 39);
+                        }
+                    }
+                }
+            }
+        }
+
+        .savebutton {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            @include block-setting(0, 0, 100%, 100%);
+            padding-top: 100px;
+            padding-bottom: 100px;
+
+            .save_table {
+                @include block-setting(0, 0px, 80px, 100px);
+                @include border(2px, 20px, rgb(109, 107, 107));
+                @include font-setting(14px);
+                box-shadow: black 5px 5px 20px;
+            }
+
+            .get_table {
+                @include block-setting(0, 0px, 80px, 100px);
+                @include border(2px, 20px, rgb(109, 107, 107));
+                @include font-setting(14px);
+                box-shadow: black 5px 5px 20px;
+            }
+
+            .save_table:hover {
+                box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+            }
+
+            .save_table:active {
+                transform: translate(3px, 5px);
+            }
+
+            .get_table:hover {
+                box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+            }
+
+            .get_table:active {
+                transform: translate(3px, 5px);
+            }
+        }
+
+        #login-form {
+            @include block-setting(0, 0, 400px, 400px);
+            background-image: url('tool5.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            @include border(2px, 20px, rgb(17, 14, 14));
+            box-shadow: black 5px 5px 20px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            #email {
+                width: 200px;
+                border-radius: 10px;
+                @include font-setting(14px);
+            }
+
+            #password {
+                width: 200px;
+                border-radius: 10px;
+                @include font-setting(14px);
+            }
+
+            button {
+                @include block-setting(0, 0px, 50px, 100px);
+                @include border(2px, 20px, rgb(109, 107, 107));
+                @include font-setting(14px);
+                box-shadow: black 5px 5px 20px;
+            }
+
+            button:hover {
+                box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+            }
+
+            button:active {
+                transform: translate(3px, 5px);
+            }
+        }
+
+        #register-form {
+            @include block-setting(0, 0, 400px, 400px);
+            background-image: url('tool5.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            @include border(2px, 20px, rgb(17, 14, 14));
+            box-shadow: black 5px 5px 20px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+
+            #email {
+                width: 200px;
+                border-radius: 10px;
+                @include font-setting(14px);
+            }
+
+            #username {
+                width: 200px;
+                border-radius: 10px;
+                @include font-setting(14px);
+            }
+
+            #password {
+                width: 200px;
+                border-radius: 10px;
+                @include font-setting(14px);
+            }
+
+            #check-password {
+                width: 200px;
+                border-radius: 10px;
+                @include font-setting(14px);
+            }
+
+            button {
+                @include block-setting(0, 0px, 60px, 100px);
+                @include border(2px, 20px, rgb(109, 107, 107));
+                @include font-setting(14px);
+                box-shadow: black 5px 5px 20px;
+            }
+
+            button:hover {
+                box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+            }
+
+            button:active {
+                transform: translate(3px, 5px);
+            }
+        }
+
+        #footer {
+            @include block-setting(0, 0, fit-content, 1300px);
+            background-image: url('tool2.jpg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+            @include border(2px, 20px, rgb(17, 14, 14));
+            box-shadow: black 5px 5px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            margin-top: 300px;
+
+            p {
+                padding: 0;
+                margin: 10px auto;
+            }
+        }
+    }
+}
+
+//pad
+@media (max-width: 959px) {
+    .new-add {
+        
+        @include border(2px, 20px, rgb(109, 107, 107));
+        @include font-setting(10px);
+        @include block-setting(0, 0, 50px, 50px);
+    }
+
+    .new-add:hover {
+        box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+    }
+
+    .new-add:active {
+        transform: translate(3px, 5px);
+    }
+
+    body {
+        @include block-setting(0, 0, fit-content, 900px);
+        @include font-setting(12px);
+
+        #root {
+            @include block-setting(0, 0, fit-content, 900px);
+
+            #sel {
+                
+                @include block-setting(0, 0px, 100px, 900px);
+                margin-top: 10px;
+                @include border(2px, 20px, rgb(109, 107, 107));
+
+                tbody {
+                    @include block-setting(0, 0px, 100px, 900px);
+
+                    #sel-year {
+                        width: 75px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-career {
+                        width: 75px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-dept {
+                        width: 125px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-level {
+                        width: 75px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-lang {
+                        width: 75px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-text {
+                        width: 75px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-teach {
+                        width: 75px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-crsName {
+                        width: 75px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-teacher {
+                        width: 75px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-week {
+                        width: 25px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-mtg {
+                        width: 25px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-emi {
+                        width: 25px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-subject {
+                        width: 75px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-group {
+                        width: 75px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-crseno {
+                        width: 75px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+                }
+            }
+
+            div {
+                margin-top: 25px;
+                margin-bottom: 25px;
+
+                .submit {
+                    
+                    @include block-setting(0, 0px, 60px, 100px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                }
+
+                .submit:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .submit:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #content {
+                @include block-setting(0, 0, 400px, 900px);
+                @include font-setting(14px);
+                opacity: 0.95;
+
+                .word_13 {
+                    @include block-setting(0, 0, fit-content, 900px);
+                    @include border(2px, 0px, rgb(185, 181, 181));
+                    
+                    table-layout: auto;
+                    word-break: break-all;
+
+                    thead {
+                        tr {
+                            td {
+                                @include block-setting(0, 0, 50px, 60px);
+                            }
+
+                            th {
+                                @include block-setting(0, 0, 50px, 60px);
+                            }
+                        }
+                    }
+
+                    tbody {
+                        tr {
+                            &:nth-child(even) td {
+                                @include block-setting(0, 0, 100px, 60px);
+                                color: black !important;
+
+                            }
+
+                            &:nth-child(odd) td {
+                                @include block-setting(0, 0, 100px, 60px);
+                                color: black !important;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            #curriculum {
+                @include block-setting(0, 0, 60px, 900px);
+                @include font-setting(14px);
+                #curriculum-tbody {
+                    #tbody-tr {
+                        &:nth-child(even) td {
+                            @include backgroud-color(rgb(144, 148, 130));
+                            @include block-setting(0, 0, 160px, 60px);
+                        }
+
+                        &:nth-child(odd) td {
+                            @include backgroud-color(rgb(132, 138, 109));
+                            @include block-setting(0, 0, 160px, 60px);
+                        }
+                    }
+                }
+            }
+
+            #header {
+                @include block-setting(0, 0, 60px, 900px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                padding-top: 20px;
+
+                ul {
+                    @include block-setting(0, 0, 60px, 900px);
+
+                    .navbar-List {
+                        @include block-setting(0, 0, 30px, 100px);
+                        display: inline-block;
+
+                        .navbar-Link {
+                            text-decoration: none;
+                            color: black;
+
+                            &:hover {
+                                color: rgb(44, 145, 83);
+                            }
+
+                            &:active {
+                                color: rgb(39, 71, 39);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .savebutton {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                @include block-setting(0, 0, 100%, 100%);
+                padding-top: 100px;
+                padding-bottom: 100px;
+
+                .save_table {
+                    @include block-setting(0, 0px, 50px, 60px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                .get_table {
+                    @include block-setting(0, 0px, 50px, 60px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                .save_table:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .save_table:active {
+                    transform: translate(3px, 5px);
+                }
+
+                .get_table:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .get_table:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #login-form {
+                @include block-setting(0, 0, 300px, 300px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                margin-top: 40px;
+                
+
+                #email {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                button {
+                    @include block-setting(0, 0px, 30px, 60px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                button:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                button:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #register-form {
+                @include block-setting(0, 0, 300px, 300px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                margin-top: 40px;
+                
+
+                #email {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #username {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #check-password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                button {
+                    @include block-setting(0, 0px, 30px, 60px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                button:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                button:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #footer {
+                @include block-setting(0, 0, fit-content, 900px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                
+
+                p {
+                    padding: 0;
+                    margin: 5px auto;
+                }
+            }
+        }
+    }
+}
+
+//mini pad
+@media (max-width: 759px) {
+    .new-add {
+        
+        @include border(2px, 20px, rgb(109, 107, 107));
+        @include font-setting(10px);
+        @include block-setting(0, 0, 50px, 50px);
+    }
+
+    .new-add:hover {
+        box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+    }
+
+    .new-add:active {
+        transform: translate(3px, 5px);
+    }
+
+    body {
+        @include block-setting(0, 0, fit-content, 600px);
+        @include font-setting(12px);
+
+        #root {
+            @include block-setting(0, 0, fit-content, 600px);
+
+            #sel {
+                
+                @include block-setting(0, 0px, 100px, 600px);
+                margin-top: 10px;
+                @include border(2px, 20px, rgb(109, 107, 107));
+
+                tbody {
+                    @include block-setting(0, 0px, 80px, 600px);
+
+                    #sel-year {
+                        width: 50px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-career {
+                        width: 50px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-dept {
+                        width: 100px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-level {
+                        width: 75px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-lang {
+                        width: 50px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-text {
+                        width: 50px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-teach {
+                        width: 50px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-crsName {
+                        width: 50px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-teacher {
+                        width: 50px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-week {
+                        width: 40px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-mtg {
+                        width: 40px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-emi {
+                        width: 40px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-subject {
+                        width: 50px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-group {
+                        width: 50px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-crseno {
+                        width: 50px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+                }
+            }
+
+            div {
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                .submit {
+                    
+                    @include block-setting(0, 0px, 40px, 80px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                }
+
+                .submit:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .submit:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #content {
+                @include block-setting(0, 0, 400px, 600px);
+                @include font-setting(10px);
+                opacity: 0.95;
+
+                .word_13 {
+                    @include block-setting(0, 0, fit-content, 600px);
+                    @include border(2px, 0px, rgb(185, 181, 181));
+                    
+                    table-layout: auto;
+                    word-break: break-all;
+
+                    thead {
+                        @include block-setting(0, 0, fit-content, 600px);
+
+                        tr {
+                            @include block-setting(0, 0, fit-content, 600px);
+
+                            td {
+                                @include block-setting(0, 0, 30px, 30px);
+                            }
+                            th {
+                                @include block-setting(0, 0, 30px, 30px);
+                            }
+                        }
+                    }
+
+                    tbody {
+                        @include block-setting(0, 0, fit-content, 600px);
+
+                        tr {
+                            @include block-setting(0, 0, fit-content, 600px);
+
+                            &:nth-child(even) td {
+                                @include block-setting(0, 0, 80px, 30px);
+                                color: black !important;
+
+                            }
+
+                            &:nth-child(odd) td {
+                                @include block-setting(0, 0, 80px, 30px);
+                                color: black !important;
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            #curriculum {
+                @include block-setting(0, 0, 60px, 600px);
+                @include font-setting(14px);
+                #curriculum-tbody {
+                    #tbody-tr {
+                        &:nth-child(even) td {
+                            @include block-setting(0, 0, 200px, 50px);                        
+                        }
+                        &:nth-child(odd) td {
+                            @include block-setting(0, 0, 200px, 50px);
+                        }
+                    }
+                }
+            }
+
+            #header {
+                @include block-setting(0, 0, 60px, 600px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                padding-top: 20px;
+
+                ul {
+                    @include block-setting(0, 0, 50px, 360px);
+
+                    .navbar-List {
+                        @include block-setting(0, 5px, 30px, 80px);
+                        display: inline-block;
+
+                        .navbar-Link {
+                            text-decoration: none;
+                            color: black;
+
+                            &:hover {
+                                color: rgb(44, 145, 83);
+                            }
+
+                            &:active {
+                                color: rgb(39, 71, 39);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .savebutton {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                @include block-setting(0, 0, 100%, 100%);
+                padding-top: 100px;
+                padding-bottom: 100px;
+
+                .save_table {
+                    @include block-setting(0, 0px, 40px, 50px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                .get_table {
+                    @include block-setting(0, 0px, 40px, 50px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                .save_table:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .save_table:active {
+                    transform: translate(3px, 5px);
+                }
+
+                .get_table:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .get_table:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #login-form {
+                @include block-setting(0, 0, 200px, 200px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                margin-top: 40px;
+                
+
+                #email {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                button {
+                    @include block-setting(0, 0px, 30px, 60px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                button:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                button:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #register-form {
+                @include block-setting(0, 0, 300px, 200px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                margin-top: 30px;
+                
+
+                #email {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #username {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #check-password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                button {
+                    @include block-setting(0, 0px, 30px, 60px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                button:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                button:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #footer {
+                @include block-setting(0, 0, fit-content, 600px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                
+
+                p {
+                    padding: 0;
+                    margin: 5px auto;
+                }
+            }
+        }
+    }
+}
+
+//mobile
+@media (max-width: 480px) {
+    .new-add {
+        
+        @include border(2px, 20px, rgb(109, 107, 107));
+        @include font-setting(12px);
+        @include block-setting(0, 0, 80px, 20px);
+    }
+
+    .new-add:hover {
+        box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+    }
+
+    .new-add:active {
+        transform: translate(3px, 5px);
+    }
+
+    body {
+        @include block-setting(0, 0, fit-content, 420px);
+        @include font-setting(12px);
+
+        #root {
+            @include block-setting(0, 0, fit-content, 420px);
+
+            #sel {
+                
+                @include block-setting(0, 0px, 100px, 420px);
+                margin-top: 10px;
+                @include border(2px, 20px, rgb(109, 107, 107));
+
+                tbody {
+                    @include block-setting(0, 0px, 80px, 420px);
+
+                    #sel-year {
+                        width: 50px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-career {
+                        width: 50px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-dept {
+                        width: 100px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-level {
+                        width: 75px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-lang {
+                        width: 40px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-text {
+                        width: 30px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-teach {
+                        width: 30px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-crsName {
+                        width: 30px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-teacher {
+                        width: 30px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-week {
+                        width: 30px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-mtg {
+                        width: 30px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-emi {
+                        width: 30px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-subject {
+                        width: 40px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-group {
+                        width: 40px;
+                        border-radius: 10px;
+                        @include font-setting(12px);
+                    }
+
+                    #sel-crseno {
+                        width: 30px;
+                        border-radius: 5px;
+                        @include font-setting(12px);
+                    }
+                }
+            }
+
+            div {
+                margin-top: 20px;
+                margin-bottom: 20px;
+
+                .submit {
+                    
+                    @include block-setting(0, 0px, 30px, 40px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                }
+
+                .submit:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .submit:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #content {
+                @include block-setting(0, 0, 400px, 420px);
+                @include font-setting(12px);
+                opacity: 0.95;
+
+                .word_13 {
+                    @include block-setting(0, 0, fit-content, 420px);
+                    @include border(2px, 0px, rgb(185, 181, 181));
+                    
+                    @include font-setting(12px);
+                    table-layout: auto;
+                    word-break: break-all;
+
+                    thead {
+                        @include block-setting(0, 0, fit-content, 420px);
+
+                        tr {
+                            @include block-setting(0, 0, fit-content, 420px);
+
+                            td {
+                                @include block-setting(0, 0, 100px, 15px);
+                                @include font-setting(12px);
+                            }
+
+                            th {
+                                @include block-setting(0, 0, 100px, 15px);
+                                @include font-setting(12px);
+                            }
+                        }
+                    }
+
+                    tbody {
+                        @include block-setting(0, 0, fit-content, 420px);
+
+                        tr {
+                            @include block-setting(0, 0, fit-content, 420px);
+
+                            &:nth-child(even) td {
+                                @include block-setting(0, 0, 100px, 15px);
+                                color: black !important;
+                                @include font-setting(12px);
+
+                            }
+
+                            &:nth-child(odd) td {
+                                @include block-setting(0, 0, 100px, 15px);
+                                color: black !important;
+                                @include font-setting(12px);
+                            }
+                        }
+                    }
+
+                }
+            }
+
+            #curriculum {
+                @include block-setting(0, 0, 60px, 420px);
+                @include font-setting(12px);
+
+                #curriculum-tbody {
+
+                    #tbody-tr {
+                        &:nth-child(even) td {
+                            @include block-setting(0, 0, 200px, 40px);
+                        }
+
+                        &:nth-child(odd) td {
+                            @include block-setting(0, 0, 200px, 40px);
+                        }
+                    }
+                }
+            }
+
+            #header {
+                @include block-setting(0, 0, 60px, 420px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                padding-top: 20px;
+
+                ul {
+                    @include block-setting(0, 0, 50px, 420px);
+
+                    .navbar-List {
+                        @include block-setting(0, 0, 30px, 60px);
+                        display: inline-block;
+
+                        .navbar-Link {
+                            text-decoration: none;
+                            color: black;
+
+                            &:hover {
+                                color: rgb(44, 145, 83);
+                            }
+
+                            &:active {
+                                color: rgb(39, 71, 39);
+                            }
+                        }
+                    }
+                }
+            }
+
+            .savebutton {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                flex-direction: row;
+                flex-wrap: nowrap;
+                @include block-setting(0, 0, 100%, 100%);
+                padding-top: 100px;
+                padding-bottom: 100px;
+
+                .save_table {
+                    @include block-setting(0, 0px, 40px, 50px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                .get_table {
+                    @include block-setting(0, 0px, 40px, 50px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                .save_table:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .save_table:active {
+                    transform: translate(3px, 5px);
+                }
+
+                .get_table:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                .get_table:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #login-form {
+                @include block-setting(0, 0, 200px, 200px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                margin-top: 40px;
+
+                #email {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                button {
+                    @include block-setting(0, 0px, 30px, 60px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                button:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                button:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #register-form {
+                @include block-setting(0, 0, 300px, 200px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                margin-top: 30px;
+                #email {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #username {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                #check-password {
+                    width: 150px;
+                    border-radius: 10px;
+                    @include font-setting(12px);
+                }
+
+                button {
+                    @include block-setting(0, 0px, 30px, 60px);
+                    @include border(2px, 20px, rgb(109, 107, 107));
+                    @include font-setting(12px);
+                    
+                }
+
+                button:hover {
+                    box-shadow: rgb(130, 139, 94) 5px 5px 20px;
+                }
+
+                button:active {
+                    transform: translate(3px, 5px);
+                }
+            }
+
+            #footer {
+                @include block-setting(0, 0, fit-content, 420px);
+                @include border(2px, 20px, rgb(17, 14, 14));
+                
+                
+
+                p {
+                    padding: 0;
+                    margin: 5px auto;
+                }
+            }
+        }
+    }
+}
